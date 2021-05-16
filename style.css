@@ -1,0 +1,295 @@
+﻿
+* {
+    box-sizing: border-box;
+  }
+  
+  body{
+    background-color: #ffe6e6;
+    color: #eb4b5e;
+    font-family: Candara, helvetica, sans-serif;
+    margin: 0;
+    padding: 10px 50px 50px 50px;   
+  }
+  
+  h1, h2{
+    margin: 0;
+  }
+  
+  header h1 {
+    font-size: 5rem;
+    user-select: none;
+  }
+  
+  #logo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  #logoImg {
+    padding-right: 10px;
+    pointer-events: none;
+  }
+  
+  .menu {
+    background-color: #eb4b5e;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 14px;
+    text-align: center;
+    color: white;
+    text-decoration: none; 
+    transition: background-color 0.5s;
+  }
+  
+  .menu a:hover {
+    background-color: white;
+    color:#eb4b5e;
+    transition: background-color 0.5s;
+  }
+  
+  .coluna-esquerda {
+    float: left;
+    width: 75%; 
+  }
+  
+  .coluna-direita {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .lastCard{
+    margin-bottom: 120px;
+  }
+
+  #promocaoBanner {
+    height: 200px;
+    background-image: url('images/brigadeiros.jpg');
+    background-size: 200%;
+    color:white;
+    font-size: 1vw;
+    position: relative;
+    text-shadow: 2px 2px 2px #eb4b5e;
+    transition: box-shadow 0.4s;
+    border-radius: 5px;
+  }
+
+  #promocaoBanner:hover {
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  #promocaoValor {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .sobreImg {
+    height: 75px ;  
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0px 0px 5px #888888;
+    cursor: pointer;
+    transition: box-shadow 0.4s;
+  }
+
+  .sobreImg:hover {
+    box-shadow: 2px 2px 10px #888888;
+  }
+
+  .sobreItens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sobreTexto a {
+    text-decoration: none;
+    color: #eb4b5e;
+  }
+
+  .sobreTexto a:hover {
+    text-decoration: underline;
+  }
+
+  .promo {
+    display: flex;
+    white-space: wrap;
+    padding: 10px;
+    font-size: 1.5vw;
+    cursor: pointer;
+    transition: box-shadow 0.4s;
+    margin: 5px;
+    align-items: center;
+  }
+
+  .promo:hover {
+    box-shadow: 2px 2px 10px #888888;
+    border-radius: 5px;
+  }
+  .promo img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social img {
+    margin: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+
+  .social img:hover {
+    opacity: 0.5;
+  }
+
+  .produto {
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    transition: box-shadow 0.4s;
+    font-size: 20px;
+  }
+
+  .produto p {
+    margin: 5px 5px;
+  }
+
+  .produto img{
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #eb4b5e;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .produto:hover {
+    box-shadow: 2px 2px 10px #888888;
+  }
+
+  .tituloProduto {
+    font-weight: bold;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .miniGrid {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  #telefone {
+    position: absolute;
+    height: 60px;
+    background-color: #cf4b4f;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    left: 16px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  
+  #telefone p {
+    margin: 0;
+  }
+
+  #entrega {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    height: 100px;
+    width: 300px;
+  }
+
+  #entrega img {
+    position: absolute;
+    right: 10px;
+    width: 75px;
+    border-radius: 50%;
+  }
+
+  #entrega img:hover + #telefone {
+    opacity: 1;
+  }
+
+  @media screen and (max-width:800px) {
+   
+    .coluna-esquerda {
+      width: 100%;
+    }
+    
+    .coluna-direita {
+      width: 100%;
+      padding-left: 0px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+    }
+
+    #logoImg {
+      width: 100px;
+    }
+
+    #promocaoBanner {
+      font-size: 4vw;
+      margin-top: 0px;
+    }
+
+    .promo {
+      font-size: 3vw;
+    }
+
+    body{
+      padding: 5px 25px 25px 25px;   
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+   
+    body{
+      padding: 5px 25px 25px 25px;   
+    }
+
+    .menu{
+      display: block;
+      width: 100%;
+    }
+    
+    .promo {
+      font-size: 4vw;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+    
+  }
